@@ -192,7 +192,7 @@ func createHTTPClient(proxy string) *http.Client {
 	// 返回客户端
 	return &http.Client{
 		Transport: transport,
-		Timeout:   60 * time.Second,
+		Timeout:   10 * time.Second,
 	}
 }
 

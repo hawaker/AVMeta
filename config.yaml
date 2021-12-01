@@ -15,5 +15,5 @@ path:
   repeat: true
   thread: 2
 site:
-  javbus: https://www.javbus.com/
+  javbus: https://www.javbus.com/search/
   javdb: https://javdb.com/

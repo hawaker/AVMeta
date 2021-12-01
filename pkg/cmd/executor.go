@@ -18,6 +18,10 @@ import (
 // 采集站点变量
 var site string
 
+//路径
+var dirPath string
+
+
 // Executor 命令对象
 type Executor struct {
 	rootCmd *cobra.Command

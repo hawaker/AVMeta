@@ -19,8 +19,10 @@ func (e *Executor) initRoot() {
 AVMeta 是一款使用 Golang 编写的跨平台 AV 元数据刮削器
 使用 AVMeta, 您可自动将 AV 电影进行归类整理
 并生成对应媒体库元数据文件`,
-		Run: e.rootRunFunc,
+		Example: `AVMeta --path ./`,
+		Run:     e.rootRunFunc,
 	}
+	e.rootCmd.Flags().StringVar(&dirPath, "path", "", "video path")
 }
 
 func (e *Executor) setTemplate() {
@@ -49,9 +51,14 @@ func (e *Executor) rootRunFunc(_ *cobra.Command, _ []string) {
 	// 初始化日志
 	logs.Log("logs")
 
-	// 获取当前执行路径
 	curDir := util.GetRunPath()
+	// 获取当前执行路径
+	if dirPath != "" {
+		curDir = dirPath
+	}
 
+	// 输出总量
+	logs.Info("\n\n当前文件路径:%s,开始统计数量...\n\n", curDir)
 	// 列当前目录
 	files, err := util.WalkDir(curDir, e.cfg.Path.Success, e.cfg.Path.Fail)
 	// 错误日志
@@ -83,8 +90,11 @@ func (e *Executor) packProcess(file string, wg *util.WaitGroup) {
 	m, err := media.Pack(file, e.cfg)
 	// 检查
 	if err != nil {
-		// 恢复文件
-		util.FailFile(file, e.cfg.Path.Fail)
+
+		if e.cfg.Path.Move {
+			// 恢复文件
+			util.FailFile(file, e.cfg.Path.Fail)
+		}
 
 		// 进程
 		wg.Done()

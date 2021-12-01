@@ -6,6 +6,7 @@ import (
 	"github.com/ylqjgm/AVMeta/pkg/logs"
 	"os"
 	"path"
+	"path/filepath"
 	"regexp"
 	"strings"
 
@@ -63,8 +64,12 @@ func packNfo(file string, cfg *util.ConfigStruct) (*Media, error) {
 
 	// 获取视频后缀
 	ext := path.Ext(file)
-	// 移动视频文件
-	err = util.MoveFile(file, fmt.Sprintf("%s/%s%s", m.DirPath, m.Number, ext))
+
+	if cfg.Path.Move {
+		// 移动视频文件
+		err = util.MoveFile(file, fmt.Sprintf("%s/%s%s", m.DirPath, m.Number, ext))
+	}
+
 
 	return m, err
 }
@@ -106,8 +111,11 @@ func packVSMeta(file string, cfg *util.ConfigStruct) (*Media, error) {
 	// 删除背景
 	_ = os.Remove(fmt.Sprintf("%s/fanart.jpg", m.DirPath))
 
-	// 移动视频文件
-	err = util.MoveFile(file, fmt.Sprintf("%s/%s%s", m.DirPath, m.Number, ext))
+	if cfg.Path.Move {
+		// 移动视频文件
+		err = util.MoveFile(file, fmt.Sprintf("%s/%s%s", m.DirPath, m.Number, ext))
+	}
+
 
 	return m, err
 }
@@ -130,7 +138,7 @@ func capture(file string, cfg *util.ConfigStruct) (*Media, error) {
 	}
 
 	// 获取准确目录
-	dirPath := util.GetNumberPath(m.ConvertMap(), cfg)
+	dirPath := filepath.Dir(file)
 	// 创建目录
 	err = os.MkdirAll(dirPath, os.ModePerm)
 	// 检查

@@ -1,0 +1,73 @@
+[Info]: 2021/12/01 16:32:32 root.go:55: 
+
+当前文件路径:./,开始统计数量...
+
+[Info]: 2021/12/01 16:32:32 root.go:59: 
+
+当前文件路径:/Users/caoqingyuan/Documents/code/AVMeta,开始统计数量...
+
+[Info]: 2021/12/01 16:32:32 root.go:68: 
+
+共探索到 0 个视频文件, 开始刮削整理...
+
+[Info]: 2021/12/01 16:32:53 root.go:61: 
+
+当前文件路径:./,开始统计数量...
+
+[Info]: 2021/12/01 16:32:53 root.go:70: 
+
+共探索到 0 个视频文件, 开始刮削整理...
+
+[Info]: 2021/12/01 16:33:07 root.go:61: 
+
+当前文件路径:/Users/caoqingyuan/Downloads,开始统计数量...
+
+[Info]: 2021/12/01 16:33:12 root.go:70: 
+
+共探索到 36 个视频文件, 开始刮削整理...
+
+[Info]: 2021/12/01 16:33:15 pack.go:270: 文件 [resources.ts] 第 1 次刮削失败，刮削来源：[JavDB]，错误原因：resources [Search]: https://javdb4.com/search?q=RESOURCES&f=all [Http Status]: 500
+[Info]: 2021/12/01 16:33:15 pack.go:270: 文件 [ionic.ts] 第 1 次刮削失败，刮削来源：[JavDB]，错误原因：ionic [Search]: https://javdb4.com/search?q=IONIC&f=all [Http Status]: 500
+[Info]: 2021/12/01 16:36:21 root.go:61: 
+
+当前文件路径:/Users/caoqingyuan/Downloads/fidder,开始统计数量...
+
+[Info]: 2021/12/01 16:36:21 root.go:70: 
+
+共探索到 1 个视频文件, 开始刮削整理...
+
+[Info]: 2021/12/01 16:36:33 pack.go:251: 文件 [svdvd-111.mp4] 第 1 次刮削失败，刮削来源：[DMM]，错误原因：https://www.dmm.co.jp/mono/anime/-/detail/=/cid=svdvd111 [Http Status]: 404
+[Info]: 2021/12/01 16:36:34 pack.go:270: 文件 [svdvd-111.mp4] 第 2 次刮削失败，刮削来源：[JavDB]，错误原因：svdvd-111 [Search]: https://javdb4.com/search?q=SVDVD-111&f=all [Http Status]: 500
+[Info]: 2021/12/01 16:36:54 root.go:61: 
+
+当前文件路径:/Users/caoqingyuan/Downloads/fidder,开始统计数量...
+
+[Info]: 2021/12/01 16:36:54 root.go:70: 
+
+共探索到 1 个视频文件, 开始刮削整理...
+
+[Info]: 2021/12/01 16:36:56 pack.go:251: 文件 [svdvd-111.mp4] 第 1 次刮削失败，刮削来源：[DMM]，错误原因：https://www.dmm.co.jp/mono/anime/-/detail/=/cid=svdvd111 [Request]: Get "https://www.dmm.co.jp/mono/anime/-/detail/=/cid=svdvd111": read tcp 192.168.43.10:49329->13.225.149.124:443: read: connection reset by peer
+[Info]: 2021/12/01 16:36:56 pack.go:270: 文件 [svdvd-111.mp4] 第 2 次刮削失败，刮削来源：[JavDB]，错误原因：svdvd-111 [Search]: https://javdb4.com/search?q=SVDVD-111&f=all [Request]: Get "https://javdb4.com/search?q=SVDVD-111&f=all": dial tcp 67.227.226.240:443: connect: connection refused
+[Info]: 2021/12/01 16:37:04 root.go:103: 文件 [svdvd-111.mp4] 刮削成功, 来源 [JavBus], 路径 [/Users/caoqingyuan/Documents/code/AVMeta/success/SVDVD-111]
+[Info]: 2021/12/01 16:45:42 root.go:61: 
+
+当前文件路径:/Users/caoqingyuan/Downloads/fidder,开始统计数量...
+
+[Info]: 2021/12/01 16:45:42 root.go:70: 
+
+共探索到 1 个视频文件, 开始刮削整理...
+
+[Info]: 2021/12/01 16:45:45 pack.go:258: 文件 [SVDVD-111.mp4] 第 1 次刮削失败，刮削来源：[DMM]，错误原因：https://www.dmm.co.jp/mono/anime/-/detail/=/cid=svdvd111 [Request]: Get "https://www.dmm.co.jp/mono/anime/-/detail/=/cid=svdvd111": read tcp 192.168.43.10:50173->13.225.149.124:443: read: connection reset by peer
+[Info]: 2021/12/01 16:45:45 pack.go:277: 文件 [SVDVD-111.mp4] 第 2 次刮削失败，刮削来源：[JavDB]，错误原因：svdvd-111 [Search]: https://javdb4.com/search?q=SVDVD-111&f=all [Request]: Get "https://javdb4.com/search?q=SVDVD-111&f=all": dial tcp 67.227.226.240:443: connect: connection refused
+[Info]: 2021/12/01 16:45:54 root.go:106: 文件 [SVDVD-111.mp4] 刮削成功, 来源 [JavBus], 路径 [/Users/caoqingyuan/Documents/code/AVMeta/success/SVDVD-111]
+[Info]: 2021/12/01 16:47:15 root.go:61: 
+
+当前文件路径:/Users/caoqingyuan/Downloads/fidder,开始统计数量...
+
+[Info]: 2021/12/01 16:47:15 root.go:70: 
+
+共探索到 1 个视频文件, 开始刮削整理...
+
+[Info]: 2021/12/01 16:47:18 pack.go:258: 文件 [SVDVD-111.mp4] 第 1 次刮削失败，刮削来源：[DMM]，错误原因：https://www.dmm.co.jp/mono/anime/-/detail/=/cid=svdvd111 [Request]: Get "https://www.dmm.co.jp/mono/anime/-/detail/=/cid=svdvd111": read tcp 192.168.43.10:50359->13.225.149.124:443: read: connection reset by peer
+[Info]: 2021/12/01 16:47:19 pack.go:277: 文件 [SVDVD-111.mp4] 第 2 次刮削失败，刮削来源：[JavDB]，错误原因：svdvd-111 [Search]: https://javdb4.com/search?q=SVDVD-111&f=all [Request]: Get "https://javdb4.com/search?q=SVDVD-111&f=all": dial tcp 67.227.226.240:443: connect: connection refused
+[Info]: 2021/12/01 16:47:28 root.go:106: 文件 [SVDVD-111.mp4] 刮削成功, 来源 [JavBus], 路径 [/Users/caoqingyuan/Documents/code/AVMeta/success/SVDVD-111]

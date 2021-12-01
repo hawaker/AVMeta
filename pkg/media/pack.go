@@ -41,6 +41,15 @@ func Pack(file string, cfg *util.ConfigStruct) (*Media, error) {
 // file 字符串参数，传入要整理的文件路径，
 // cfg ConfigStruct结构体，传入程序配置信息。
 func packNfo(file string, cfg *util.ConfigStruct) (*Media, error) {
+	if cfg.Path.Repeat {
+		if util.Exists(fmt.Sprintf("%s.nfo",file)){
+			logs.Info("文件已存在:%s",file)
+			var m1 Media
+			m1.Source="local"
+			m1.DirPath=filepath.Dir(file)
+			return &m1,nil
+		}
+	}
 	// 获取采集数据
 	m, err := capture(file, cfg)
 	// 检查
@@ -80,6 +89,15 @@ func packNfo(file string, cfg *util.ConfigStruct) (*Media, error) {
 // file 字符串参数，传入要整理的文件路径，
 // cfg ConfigStruct结构体，传入程序配置信息。
 func packVSMeta(file string, cfg *util.ConfigStruct) (*Media, error) {
+	if cfg.Path.Repeat {
+		if util.Exists(fmt.Sprintf("%s.vsmeta",file)){
+			logs.Info("文件已存在:%s",file)
+			var m1 Media
+			m1.Source="local"
+			m1.DirPath=filepath.Dir(file)
+			return &m1,nil
+		}
+	}
 	// 获取整理数据
 	m, err := capture(file, cfg)
 	// 检查

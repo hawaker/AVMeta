@@ -15,7 +15,9 @@ type PathStruct struct {
 	Fail      string // 失败存储目录
 	Directory string // 影片存储路径格式
 	Filter    string // 文件名过滤规则
-	Move  bool   //成功失败后移动文件
+	Move      bool   //成功失败后移动文件
+	Repeat    bool   //如果文件存在则不继续
+	Thread 	  int 	 //线程数量
 }
 
 // MediaStruct 配置信息媒体库节点

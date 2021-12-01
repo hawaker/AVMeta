@@ -70,7 +70,7 @@ func (e *Executor) rootRunFunc(_ *cobra.Command, _ []string) {
 	logs.Info("\n\n共探索到 %d 个视频文件, 开始刮削整理...\n\n", count)
 
 	// 初始化进程
-	wg := util.NewWaitGroup(2)
+	wg := util.NewWaitGroup(e.cfg.Path.Thread)
 
 	// 循环视频文件列表
 	for _, file := range files {

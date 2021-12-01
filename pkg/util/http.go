@@ -77,9 +77,7 @@ func GetResult(uri, proxy string, cookies []*http.Cookie) ([]byte, error) {
 	// 头部定义
 	header := make(map[string]string)
 	// 加入头部信息
-	header["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
-		"AppleWebKit/537.36 (KHTML, like Gecko) " +
-		"Chrome/68.0.3440.106 Safari/537.36"
+	header["User-Agent"] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36"
 	header["referer"] = uri
 
 	// 执行请求
